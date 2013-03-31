@@ -1,0 +1,241 @@
+/* ================
+ * Container layout
+ * ================ */
+
+#content-container {
+    width: 610px;
+    margin: auto;
+}
+
+header.site {
+  position: relative;
+}
+
+#contact {
+  position: absolute;
+  margin-top: 1.3125em;
+  right: 0;
+  top: 0;
+  margin: 0;
+  text-align: right;
+  font-size: 0.8em;
+  color: #999;
+}
+
+#contact ul {
+  margin: 0;
+}
+
+
+
+/* =============
+ * Font settings
+ * ============= */
+
+body {
+    font-family: 'PT Serif';
+    font-size: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato';
+    font-weight: 900;
+}
+
+
+body,
+li,
+blockquote p {
+    font-size: 100%;
+    line-height: 1.5em;
+}
+
+article header {
+  margin-bottom: 2.125em;
+}
+
+header.site,
+header.site a {
+  color: #999;
+}
+
+article header time {
+    font-size: 0.8em;
+    font-weight: 400;
+    font-family: Lato;
+    color: #999;
+}
+
+article header h1 {
+  border-bottom: 1px solid #999;
+  padding-bottom: 0.1875em;
+}
+
+p {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+
+
+/* ===============
+ * Content margins
+ * =============== */
+
+header.site {
+  margin-top: 3em;
+  margin-bottom: 2.125em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.1875em;
+  margin-top: 1.3125em;
+}
+
+p,
+ul, ol,
+hr {
+    margin-bottom: 1.3125em;
+}
+
+
+ul, ol {
+  margin-left: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 0 0 10px 25px
+}
+
+h1 + ul,
+h1 + ol,
+h2 + ul,
+h2 + ol,
+h3 + ul,
+h3 + ol,
+h4 + ul,
+h4 + ol,
+h5 + ul,
+h5 + ol,
+h6 + ul,
+h6 + ol,
+ul + p,
+ol + p  {
+    margin-top: 1.3125em;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul,
+blockquote p {
+    margin-bottom: 0;
+}
+
+time + h1 {
+  margin-top: 0;
+}
+
+section.comments {
+  margin-top: 3.4375em;
+}
+
+
+
+/* ============
+ * List styling
+ * ============ */
+
+ul {
+  list-style-type: none;
+}
+
+ul li:before {
+  content: "» ";
+}
+
+ul ul li:before {
+  content: "• ";
+}
+
+
+
+/* ======================
+ * Other content elements
+ * ====================== */
+
+hr {
+    border: 0;
+    padding: 0;
+    text-align: center;
+}
+
+hr:after {
+    content: "✱ ✱ ✱";
+    color: #bbb;
+    font-size: 0.6em;
+    letter-spacing: 0.8em;
+}
+
+blockquote small {
+  font-size: 80%;
+}
+
+blockquote small a {
+  color: #999;
+  text-decoration: underline;
+}
+
+
+
+/* ======
+ * Images
+ * ====== */
+
+img.float-right {
+  margin: 0.3125em 0 0.3125em 1em;
+  float: right;
+}
+
+
+
+/* ====================
+ * Google Code Prettify
+ * ==================== */
+
+ .com { color: #93a1a1; }
+ .lit { color: #195f91; }
+ .pun, .opn, .clo { color: #93a1a1; }
+ .fun { color: #dc322f; }
+ .str, .atv { color: #D14; }
+ .kwd, .prettyprint .tag { color: #1e347b; }
+ .typ, .atn, .dec, .var { color: teal; }
+ .pln { color: #48484c; }
+
+ .prettyprint,
+ pre {
+   padding: 8px;
+   background-color: #f7f7f9;
+   border: 1px solid #e1e1e8;
+ }
+ .prettyprint.linenums {
+   -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+      -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+           box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+ }
+
+ /* Specify class=linenums on a pre to get line numbering */
+ ol.linenums {
+   margin: 0 0 0 33px; /* IE indents via margin-left */
+ }
+ ol.linenums li {
+   padding-left: 12px;
+   color: #bebec5;
+   line-height: 20px;
+   text-shadow: 0 1px 0 #fff;
+ }
