@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Switch to _style directory, i.e. where the "apply" script lies
+cd $(dirname $0)
+
+if [[ ! -e "../_config.yml" ]]; then
+    echo "The parent directory of where 'apply' lives does not seem to be a Jekyll blog"
+    echo "Aborting..."
+    exit
+fi
+
+echo "Symlinking common files into blog..."
+for file in $(git ls-files); do
+    target="../$file"
+    [[ -e $target && ! -s $target ]] &&
+        abort "$target exists and is not a symlink"
+
+    [[ -e $target && -s $target ]] &&
+        echo "$file already symlinked to $target"
+
+    if [[ ! -e $target ]]; then
+        echo "Symlinking $file to $target"
+        ln -s $file $target
+    fi
+done
