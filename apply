@@ -10,8 +10,15 @@ if [[ ! -e "../_config.yml" ]]; then
 fi
 
 echo "Symlinking common files into blog..."
-for file in $(git ls-files); do
+for file in $(git ls-files | grep --invert-match "apply"); do
     target="../$file"
+    target_dir=$(dirname $target)
+
+    if [[ ! -d $target_dir ]]; then
+        echo "$target_dir does not exist, creating.."
+        mkdir -p $target_dir
+    fi
+
     [[ -e $target && ! -s $target ]] &&
         abort "$target exists and is not a symlink"
 
@@ -20,6 +27,6 @@ for file in $(git ls-files); do
 
     if [[ ! -e $target ]]; then
         echo "Symlinking $file to $target"
-        ln -s $file $target
+        ln -s "../_style/$file" $target
     fi
 done
