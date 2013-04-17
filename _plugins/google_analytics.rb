@@ -6,9 +6,10 @@ module Jekyll
     end
 
     def render(context)
-      return "" if !Jekyll.configuration({})['google_analytics']['enable']
-      account = Jekyll.configuration({})['google_analytics']['account']
-      domain = Jekyll.configuration({})['google_analytics']['domain']
+      site = context.registers[:site]
+      return "" if !site.config['google_analytics']['enable']
+      account = site.config['google_analytics']['account']
+      domain = site.config['google_analytics']['domain']
 
       <<-eof
         <script>
