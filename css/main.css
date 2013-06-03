@@ -7,19 +7,30 @@
     margin: auto;
 }
 
+@media (max-width: 630px) {
+  #content-container {
+    width: auto;
+    padding: 15px;
+  }
+}
+
 header.site {
   position: relative;
 }
 
 #contact {
-  position: absolute;
-  margin-top: 1.3125em;
-  right: 0;
-  top: 0;
-  margin: 0;
   text-align: right;
   font-size: 0.8em;
   color: #999;
+}
+
+@media (min-width: 630px) {
+  #contact {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+  }
 }
 
 #contact ul {
