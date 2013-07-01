@@ -20,7 +20,8 @@ header.site {
 
 #contact {
   text-align: right;
-  font-size: 0.8em;
+  font-size: 14px;
+  line-height: normal;
   color: #999;
 }
 
@@ -45,7 +46,8 @@ header.site {
 
 body {
     font-family: 'PT Serif';
-    font-size: 100%;
+    font-size: 125%;
+    line-height: 1.4em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,11 +56,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-body,
+
+
+
 li,
-blockquote p {
-    font-size: 100%;
-    line-height: 1.5em;
+blockquote p,
+code {
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+pre {
+  font-size: 0.9em;
+}
+
+p code { /* Inline code */
+  font-size: 0.8em;
+  background-color: transparent;
+  border: none;
+  padding: 0 2px;
 }
 
 article header {
@@ -107,7 +123,9 @@ h1, h2, h3, h4, h5, h6 {
 
 p,
 ul, ol,
-hr {
+hr,
+pre,
+pre.prettyprint {
     margin-bottom: 1.3125em;
 }
 
@@ -231,8 +249,8 @@ img.float-right {
  .prettyprint,
  pre {
    padding: 8px;
-   background-color: #f7f7f9;
-   border: 1px solid #e1e1e8;
+   background-color: transparent;
+   border: none;
  }
  .prettyprint.linenums {
    -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
