@@ -141,6 +141,11 @@ ol ul {
   margin: 0 0 10px 25px
 }
 
+ul + p,
+ol + p  {
+    margin-top: 1.3125em;
+}
+
 h1 + ul,
 h1 + ol,
 h2 + ul,
@@ -152,10 +157,8 @@ h4 + ol,
 h5 + ul,
 h5 + ol,
 h6 + ul,
-h6 + ol,
-ul + p,
-ol + p  {
-    margin-top: 1.3125em;
+h6 + ol {
+  margin-top: 0.5em;
 }
 
 ul ul,
