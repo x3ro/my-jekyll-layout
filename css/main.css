@@ -66,6 +66,10 @@ code {
     line-height: 1.4em;
 }
 
+code {
+  font-size: 15px;
+}
+
 pre {
   font-size: 0.9em;
 }
@@ -271,3 +275,14 @@ img.float-right {
    line-height: 20px;
    text-shadow: 0 1px 0 #fff;
  }
+
+
+
+/* ============
+ * GitHub Gists
+ * ============ */
+
+.gist {
+  font-size: 13px;
+  line-height: normal;
+}
