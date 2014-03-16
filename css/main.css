@@ -1,3 +1,6 @@
+
+
+
 /* ================
  * Container layout
  * ================ */
@@ -7,10 +10,32 @@
     margin: auto;
 }
 
+.center {
+  display: block;
+  margin: auto;
+}
+
+#content-container {
+  padding-top: 15px;
+}
+
 @media (max-width: 630px) {
   #content-container {
     width: auto;
     padding: 15px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  #contact ul {
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -18,11 +43,15 @@ header.site {
   position: relative;
 }
 
+header.site a {
+  text-decoration: none;
+}
+
 #contact {
-  text-align: right;
   font-size: 14px;
   line-height: normal;
   color: #999;
+  text-align: right;
 }
 
 @media (min-width: 630px) {
@@ -30,9 +59,19 @@ header.site {
     position: absolute;
     right: 0;
     top: 0;
+  }
 
+  ul.desktop-inline li {
+    display: inline;
+    margin-left: 8px;
+  }
+
+  .hide-desktop {
+    display: none;
   }
 }
+
+
 
 #contact ul {
   margin: 0;
@@ -44,20 +83,25 @@ header.site {
  * Font settings
  * ============= */
 
+html {
+  font-size: 20px;
+}
+
 body {
-    font-family: 'PT Serif';
-    font-size: 125%;
-    line-height: 1.4em;
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+    line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato';
-    font-weight: 900;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    line-height: 1;
 }
 
-
-
-
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.17rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: .83rem; }
 
 li,
 blockquote p,
@@ -79,10 +123,12 @@ p code { /* Inline code */
   background-color: transparent;
   border: none;
   padding: 0 2px;
+  color: #D14;
 }
 
 article header {
   margin-bottom: 2.125em;
+  text-align: center;
 }
 
 header.site,
@@ -90,10 +136,14 @@ header.site a {
   color: #999;
 }
 
+header.site h5 {
+  font-weight: normal;
+}
+
 article header time {
     font-size: 0.8em;
     font-weight: 400;
-    font-family: Lato;
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     color: #999;
 }
 
@@ -103,7 +153,6 @@ article header h1 {
 }
 
 p {
-  text-align: justify;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
@@ -116,8 +165,11 @@ p {
  * =============== */
 
 header.site {
-  margin-top: 3em;
-  margin-bottom: 2.125em;
+  margin-bottom: 1.5em;
+}
+
+header.site * {
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -131,6 +183,10 @@ hr,
 pre,
 pre.prettyprint {
     margin-bottom: 1.3125em;
+}
+
+hr {
+  height: 33px;
 }
 
 
@@ -199,6 +255,17 @@ ul ul li:before {
   content: "• ";
 }
 
+ul.worklist {
+  font-size: 1rem;
+  padding-left: 0;
+}
+
+table.worklist td {
+  vertical-align: top;
+}
+table.worklist td.spacer {
+  padding: 0 5px;
+}
 
 
 /* ======================
@@ -238,6 +305,9 @@ img.float-right {
   float: right;
 }
 
+.img-circle {
+  border-radius: 100px;
+}
 
 
 /* ====================
